@@ -6,19 +6,38 @@
 		body {
 			width: 200px;
 		}
+		label.checkbox {
+			display: block;
+		}
 		label.checkbox,
 		label.checkbox * {
-			cursor: pointer;
 			user-select: none;
 			vertical-align: middle;
+		}
+		label.checkbox:not(.disabled),
+		label.checkbox:not(.disabled) * {
+			cursor: pointer;
 		}
 		input[type="button"] {
 			cursor: pointer;
 			padding: 10px;
 		}
+		kbd {
+			background-color: #eee;
+			border-radius: 3px;
+			border: 1px solid #b4b4b4;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+			font-weight: 700;
+			padding: 2px 4px;
+			white-space: nowrap;
+		}
 	</style>
 </head>
 <body>
+	<label class="checkbox disabled">
+		<input type="checkbox" checked disabled>
+		<span><kbd>Ctrl</kbd> + <kbd>W</kbd> を無効化する</span>
+	</label>
 	<label class="checkbox">
 		<input type="checkbox" id="disable-all-key-input">
 		<span>すべてのキー入力を無効化する</span>
