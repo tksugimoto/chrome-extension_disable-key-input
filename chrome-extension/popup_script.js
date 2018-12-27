@@ -6,13 +6,13 @@ document.getElementById('open').addEventListener('click', () => {
 		chrome.tabs.executeScript(tab.id, {
 			file: 'disable-ctrl_w.js',
 		});
-		const disableReloadShortcutInput = document.getElementById('disable-reload-shortcut-input').checked;
+		const disableReloadShortcutInput = document.getElementById('disable-ctrl_r').checked;
 		if (disableReloadShortcutInput) {
 			chrome.tabs.executeScript(tab.id, {
 				file: 'disable-ctrl_r.js',
 			});
 		}
-		const disableAllKeyInput = document.getElementById('disable-all-key-input').checked;
+		const disableAllKeyInput = document.getElementById('disable-all').checked;
 		if (disableAllKeyInput) {
 			chrome.tabs.executeScript(tab.id, {
 				file: 'disable-all.js',
