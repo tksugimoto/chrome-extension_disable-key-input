@@ -4,18 +4,18 @@ document.getElementById('open').addEventListener('click', () => {
 		currentWindow: true,
 	}, ([tab]) => {
 		chrome.tabs.executeScript(tab.id, {
-			file: 'disable-shotrcut-tab-close.js',
+			file: 'disable-ctrl_w.js',
 		});
 		const disableReloadShortcutInput = document.getElementById('disable-reload-shortcut-input').checked;
 		if (disableReloadShortcutInput) {
 			chrome.tabs.executeScript(tab.id, {
-				file: 'disable-shotrcut-tab-reload.js',
+				file: 'disable-ctrl_r.js',
 			});
 		}
 		const disableAllKeyInput = document.getElementById('disable-all-key-input').checked;
 		if (disableAllKeyInput) {
 			chrome.tabs.executeScript(tab.id, {
-				file: 'disable-all-key-input.js',
+				file: 'disable-all.js',
 			});
 		}
 		chrome.windows.create({
