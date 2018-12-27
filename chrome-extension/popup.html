@@ -6,6 +6,9 @@
 		body {
 			width: 200px;
 		}
+		h1 {
+			font-size: 1.5em;
+		}
 		label.checkbox {
 			display: block;
 		}
@@ -34,17 +37,18 @@
 	</style>
 </head>
 <body>
+	<h1>無効化対象</h1>
 	<label class="checkbox disabled">
 		<input type="checkbox" checked disabled>
-		<span><kbd>Ctrl</kbd> + <kbd>W</kbd> (Close tab) を無効化する</span>
+		<span><kbd>Ctrl</kbd> + <kbd>W</kbd> (Close tab)</span>
 	</label>
 	<label class="checkbox">
 		<input type="checkbox" id="disable-reload-shortcut-input">
-		<span><kbd>Ctrl</kbd> + <kbd>R</kbd> (Reload tab) を無効化する</span>
+		<span><kbd>Ctrl</kbd> + <kbd>R</kbd> (Reload tab)</span>
 	</label>
 	<label class="checkbox">
 		<input type="checkbox" id="disable-all-key-input">
-		<span>すべてのキー入力を無効化する</span>
+		<span>すべてのキー入力</span>
 	</label>
 	<p>
 		<input type="button" value="新規Windowで開く" id="open">
