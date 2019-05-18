@@ -4,17 +4,20 @@ document.getElementById('open').addEventListener('click', () => {
 		currentWindow: true,
 	}, ([tab]) => {
 		chrome.tabs.executeScript(tab.id, {
+			allFrames: true,
 			file: 'scripts/disable-ctrl_w.js',
 		});
 		const disableReloadShortcutInput = document.getElementById('disable-ctrl_r').checked;
 		if (disableReloadShortcutInput) {
 			chrome.tabs.executeScript(tab.id, {
+				allFrames: true,
 				file: 'scripts/disable-ctrl_r.js',
 			});
 		}
 		const disableAllKeyInput = document.getElementById('disable-all').checked;
 		if (disableAllKeyInput) {
 			chrome.tabs.executeScript(tab.id, {
+				allFrames: true,
 				file: 'scripts/disable-all.js',
 			});
 		}
