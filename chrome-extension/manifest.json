@@ -1,7 +1,7 @@
 {
 	"name": "Disable key input",
 	"description": "特定のキー入力（キーボードショートカット）を無効化してページに入力できるようにする",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"manifest_version": 2,
 	"permissions": [
 		"activeTab"
